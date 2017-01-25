@@ -27,7 +27,7 @@ RUN echo ${user}:${pass} | chpasswd
 
 # Sudo without password
 RUN echo "#!/usr/bin/env bash" > /bin/visudoset
-RUN echo "echo \"${HOST_USER_NAME} ALL=(ALL) NOPASSWD: ALL\" >> \$1" >> /bin/visudoset
+RUN echo "echo \"${user} ALL=(ALL) NOPASSWD: ALL\" >> \$1" >> /bin/visudoset
 RUN chmod a+x /bin/visudoset
 RUN EDITOR=visudoset visudo
 RUN rm -f /bin/visudoset
