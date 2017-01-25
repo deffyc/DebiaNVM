@@ -9,13 +9,10 @@ RUN apt update && \
    
 #Optional variables defaults
 
-ARG group=coding
 ARG user=c9
 ARG pass=rules
 
 
-
-ENV group $group
 ENV user $user
 ENV pass $pass
 
