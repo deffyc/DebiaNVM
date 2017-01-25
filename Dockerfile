@@ -4,7 +4,7 @@ MAINTAINER houjie <deffyc@gmail.com>
 
 RUN apt update && \
     apt install -y sudo && \
-    rm -rf /var/lib/apt/lists/* && \
+   # rm -rf /var/lib/apt/lists/* && \
     apt install -y curl wget vim    
 
 #Optional variables defaults
